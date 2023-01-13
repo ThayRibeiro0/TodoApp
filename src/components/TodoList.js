@@ -4,6 +4,7 @@ import TodoForm from './TodoForm';
 function TodoList() {
     const [todos, setTodos] = useState([]);
 
+    //for when you tap other thing that it isn't letter he keep empty
     const addTodo = todo => {
         if(!todo.text || /^\s*$/.test(todo.text)) {
             return;
@@ -12,7 +13,6 @@ function TodoList() {
         const newTodos = [todo, ...todos];
 
         setTodos(newTodos);
-        console.log(todo, ...todos);
     };
 
   return (

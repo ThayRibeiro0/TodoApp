@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 function TodoForm(props) {
     //const to make the input work use the useState
@@ -17,13 +17,12 @@ function TodoForm(props) {
             id: Math.floor(Math.random() * 10000),
             text: input
         });
-
-        setInput('')
+        setInput('');
     };
 
     return (
         //this part make the box to write appear or input and the button
-        <form className='todo-form' onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className='todo-form'>
             <input 
                 type='text' 
                 placeholder='Add a todo' 
