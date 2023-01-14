@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 function TodoForm(props) {
     //const to make the input work use the useState
-    const [input, setInput] = useState('');
+    const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
     //for edit one note and it focus in this edition
     const inputRef = useRef(null)
@@ -29,6 +29,21 @@ function TodoForm(props) {
     return (
         //this part make the box to write appear or input and the button
         <form onSubmit={handleSubmit} className='todo-form'>
+            {props.edit ? (
+            <>
+            <input 
+                type='text' 
+                placeholder='Update your item' 
+                value={input}
+                name='text'
+                className='todo-input edit'
+                onChange={handleChange}
+                ref={inputRef}
+            />
+            <button className='todo-button edit'> Update </button> 
+            </>
+            ) : (
+            <>
             <input 
                 type='text' 
                 placeholder='Add a todo' 
@@ -38,7 +53,9 @@ function TodoForm(props) {
                 onChange={handleChange}
                 ref={inputRef}
             />
-            <button className='todo-button'> Add todo </button>
+            <button className='todo-button'> Add todo </button> 
+            </>
+            )}
         </form>
     );
 }
