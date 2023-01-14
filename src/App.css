@@ -86,8 +86,8 @@ h1 {
 .todo-button.edit{
     background: linear-gradient(
         90deg,
-        rgb(148, 185, 212) 0%,
-        rgb(255, 17, 255) 100%
+        rgb(175, 81, 55) 0%,
+        rgb(88, 255, 17) 100%
     );
     padding: 16px 22px;
 }
@@ -117,8 +117,8 @@ h1 {
 .todo-row:nth-child(4n + 1){
     background: linear-gradient(
     90deg,
-    rgb(28, 12, 255) 0%,
-    rgba(155, 0, 250, 1) 100%
+    rgb(255, 243, 12) 0%,
+    rgb(63, 28, 85) 100%
   );
 }
 

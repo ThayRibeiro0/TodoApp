@@ -29,6 +29,13 @@ function TodoForm(props) {
     return (
         //this part make the box to write appear or input and the button
         <form onSubmit={handleSubmit} className='todo-form'>
+            {/* <input 
+            type='text'
+            value={title} 
+            onChange={handleChange}
+            placeholder='Title' 
+            /> */}
+
             {props.edit ? (
             <>
             <input 
