@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 function TodoForm(props) {
     //const to make the input work use the useState
     const [input, setInput] = useState('');
+
+    //for edit one note and it focus in this edition
+    const inputRef = useRef(null)
+    useEffect(() => {
+        inputRef.current.focus()
+    });
 
     //this its for make the input of user work in the box
     const handleChange = e => {
@@ -30,6 +36,7 @@ function TodoForm(props) {
                 name='text'
                 className='todo-input'
                 onChange={handleChange}
+                ref={inputRef}
             />
             <button className='todo-button'> Add todo </button>
         </form>
