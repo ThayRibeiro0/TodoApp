@@ -12,7 +12,9 @@ This project was bootstrapped for you with [Create React App](https://github.com
 
 In the project directory, you can run:
 
+### `npm install`
 ### `npm start`
+
 
 We've already run this for you in the `Codespaces: server` terminal window below. If you need to stop the server for any reason you can just run `npm start` again to bring it back online.
 
